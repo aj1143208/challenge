@@ -8,10 +8,10 @@ def parse_args():
     parser.add_argument('--dropout', type=float, default=0.3, help='dropout ratio')
 
     # ========================= Data Configs ==========================
-    parser.add_argument('--train_annotation', type=str, default='/kaggel/input/challegemian/labeled.json')
-    parser.add_argument('--test_annotation', type=str, default='/kaggel/input/challegemian/test_a.json')
-    parser.add_argument('--train_zip_feats', type=str, default='/kaggel/input/challegemian/labeled.zip')
-    parser.add_argument('--test_zip_feats', type=str, default='/kaggel/input/challegemian/test_a.zip')
+    parser.add_argument('--train_annotation', type=str, default='/kaggel/input/challegemain/labeled.json')
+    parser.add_argument('--test_annotation', type=str, default='/kaggel/input/challegemain/test_a.json')
+    parser.add_argument('--train_zip_feats', type=str, default='/kaggel/input/challegemain/labeled.zip')
+    parser.add_argument('--test_zip_feats', type=str, default='/kaggel/input/challegemain/test_a.zip')
     parser.add_argument('--test_output_csv', type=str, default='data/result.csv')
     parser.add_argument('--val_ratio', default=0.1, type=float, help='split 10 percentages of training data as validation')
     parser.add_argument('--batch_size', default=64, type=int, help="use for training duration per worker")
