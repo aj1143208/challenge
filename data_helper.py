@@ -66,10 +66,10 @@ class MultiModalDataset(Dataset):
         else:
             self.handles = zipfile.ZipFile(self.zip_feat_path, 'r')
         # load annotations
-        with open('/kaggle/input/challegemain/labeled.json', 'r', encoding='utf8') as f:
-            self.anns = json.load(f)
-#         with open(ann_path, 'r', encoding='utf8') as f:
+#         with open('/kaggle/input/challegemain/labeled.json', 'r', encoding='utf8') as f:
 #             self.anns = json.load(f)
+        with open(ann_path, 'r', encoding='utf8') as f:
+            self.anns = json.load(f)
         # initialize the text tokenizer
         self.tokenizer = BertTokenizer.from_pretrained(args.bert_dir, use_fast=True, cache_dir=args.bert_cache)
 
