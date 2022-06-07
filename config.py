@@ -55,4 +55,4 @@ def parse_args():
     # ========================== Fusion Layer =============================
     parser.add_argument('--fc_size', type=int, default=512, help="linear size before final linear")
 
-    return parser.parse_args()
+    return parser.parse_known_args()[0]
